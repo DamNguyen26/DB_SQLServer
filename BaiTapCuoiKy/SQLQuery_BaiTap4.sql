@@ -24,7 +24,7 @@ CREATE TABLE tblSV(
     GioiTinh nvarchar(3)CHECK ( GioiTinh=N'Nam' or GioiTinh=N'Nữ'  ),  
     Email nvarchar(30) NOT NULL, 
     SDT int NOT NULL,
-    FOREIGN KEY (MaLop) REFERENCES tblLop(MaLop)
+    
 )
 INSERT INTO tblSV(MaSV, MaLop, TenSV, NamSinh, GioiTinh, Email, SDT) VALUES
     ('SV001', '60TH1', 'Vũ Minh', '2000', 'Nam', 'damnguyen26@gmail.com', '03985716'),
@@ -44,6 +44,7 @@ CREATE TABLE tblLop(
     KhoaDaoTao int NOT NULL,
     BacDaoTao nvarchar(30) NOT NULL,
     SoSV int NOT NULL,
+    FOREIGN KEY (MaLop) REFERENCES tblSV(MaLop)
     FOREIGN KEY (MaGV) REFERENCES tblGV(MaGV)
 )
 INSERT INTO tblLop(MaLop, MaGV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
