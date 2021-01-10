@@ -33,11 +33,11 @@ namespace QuanLyDoAn
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -94,6 +94,30 @@ namespace QuanLyDoAn
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản lý";
             // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.linkLabel5.Location = new System.Drawing.Point(233, 57);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(134, 20);
+            this.linkLabel5.TabIndex = 6;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Quản lý hội đồng";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(0, 13);
+            this.linkLabel4.Location = new System.Drawing.Point(236, 23);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(95, 25);
+            this.linkLabel4.TabIndex = 3;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Quản lý lớp";
+            this.linkLabel4.UseCompatibleTextRendering = true;
+            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
@@ -105,6 +129,7 @@ namespace QuanLyDoAn
             this.linkLabel2.TabIndex = 4;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Quản lý sinh viên";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -130,30 +155,6 @@ namespace QuanLyDoAn
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Quản lý đồ án";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(0, 13);
-            this.linkLabel4.Location = new System.Drawing.Point(236, 23);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(95, 25);
-            this.linkLabel4.TabIndex = 3;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Quản lý lớp";
-            this.linkLabel4.UseCompatibleTextRendering = true;
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.linkLabel5.Location = new System.Drawing.Point(233, 57);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(134, 20);
-            this.linkLabel5.TabIndex = 6;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Quản lý hội đồng";
             // 
             // button1
             // 

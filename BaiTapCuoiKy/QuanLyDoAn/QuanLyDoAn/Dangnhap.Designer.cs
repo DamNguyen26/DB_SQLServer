@@ -32,9 +32,9 @@ namespace QuanLyDoAn
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbmadangnhap = new System.Windows.Forms.TextBox();
+            this.tbmatkhau = new System.Windows.Forms.TextBox();
+            this.btdangnhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,42 +66,42 @@ namespace QuanLyDoAn
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
-            // textBox1
+            // tbmadangnhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 22);
-            this.textBox1.TabIndex = 3;
+            this.tbmadangnhap.Location = new System.Drawing.Point(238, 138);
+            this.tbmadangnhap.Name = "tbmadangnhap";
+            this.tbmadangnhap.Size = new System.Drawing.Size(340, 22);
+            this.tbmadangnhap.TabIndex = 3;
             // 
-            // textBox2
+            // tbmatkhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(340, 22);
-            this.textBox2.TabIndex = 4;
+            this.tbmatkhau.Location = new System.Drawing.Point(238, 194);
+            this.tbmatkhau.Name = "tbmatkhau";
+            this.tbmatkhau.Size = new System.Drawing.Size(340, 22);
+            this.tbmatkhau.TabIndex = 4;
             // 
-            // button1
+            // btdangnhap
             // 
-            this.button1.Location = new System.Drawing.Point(343, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btdangnhap.Location = new System.Drawing.Point(343, 283);
+            this.btdangnhap.Name = "btdangnhap";
+            this.btdangnhap.Size = new System.Drawing.Size(107, 31);
+            this.btdangnhap.TabIndex = 5;
+            this.btdangnhap.Text = "Đăng nhập";
+            this.btdangnhap.UseVisualStyleBackColor = true;
+            this.btdangnhap.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // Dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btdangnhap);
+            this.Controls.Add(this.tbmatkhau);
+            this.Controls.Add(this.tbmadangnhap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Dangnhap";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,9 +113,9 @@ namespace QuanLyDoAn
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbmadangnhap;
+        private System.Windows.Forms.TextBox tbmatkhau;
+        private System.Windows.Forms.Button btdangnhap;
     }
 }
 

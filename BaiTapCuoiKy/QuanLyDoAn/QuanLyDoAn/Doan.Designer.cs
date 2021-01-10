@@ -31,20 +31,20 @@ namespace QuanLyDoAn
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doan));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbNam = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btLamMoi = new System.Windows.Forms.Button();
-            this.tbQue = new System.Windows.Forms.TextBox();
-            this.tbHoTen = new System.Windows.Forms.TextBox();
-            this.tbMSSV = new System.Windows.Forms.TextBox();
+            this.tbTenDoAn = new System.Windows.Forms.TextBox();
+            this.tbMaHoiDong = new System.Windows.Forms.TextBox();
+            this.tbMaDoAn = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbChuNha = new System.Windows.Forms.CheckBox();
-            this.cbDiaChi = new System.Windows.Forms.CheckBox();
-            this.cbMSSV = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btTim = new System.Windows.Forms.Button();
+            this.cbNam = new System.Windows.Forms.CheckBox();
+            this.cbTenDoAn = new System.Windows.Forms.CheckBox();
+            this.cbMaDoAn = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -64,12 +64,12 @@ namespace QuanLyDoAn
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbNam);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btLamMoi);
-            this.groupBox1.Controls.Add(this.tbQue);
-            this.groupBox1.Controls.Add(this.tbHoTen);
-            this.groupBox1.Controls.Add(this.tbMSSV);
+            this.groupBox1.Controls.Add(this.tbTenDoAn);
+            this.groupBox1.Controls.Add(this.tbMaHoiDong);
+            this.groupBox1.Controls.Add(this.tbMaDoAn);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -81,6 +81,24 @@ namespace QuanLyDoAn
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đồ án";
+            // 
+            // tbNam
+            // 
+            this.tbNam.Location = new System.Drawing.Point(116, 140);
+            this.tbNam.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNam.Name = "tbNam";
+            this.tbNam.Size = new System.Drawing.Size(132, 22);
+            this.tbNam.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Năm:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btLamMoi
             // 
@@ -94,29 +112,29 @@ namespace QuanLyDoAn
             this.btLamMoi.Text = "Làm mới";
             this.btLamMoi.UseVisualStyleBackColor = true;
             // 
-            // tbQue
+            // tbTenDoAn
             // 
-            this.tbQue.Location = new System.Drawing.Point(116, 97);
-            this.tbQue.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQue.Name = "tbQue";
-            this.tbQue.Size = new System.Drawing.Size(192, 22);
-            this.tbQue.TabIndex = 11;
+            this.tbTenDoAn.Location = new System.Drawing.Point(116, 97);
+            this.tbTenDoAn.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTenDoAn.Name = "tbTenDoAn";
+            this.tbTenDoAn.Size = new System.Drawing.Size(192, 22);
+            this.tbTenDoAn.TabIndex = 11;
             // 
-            // tbHoTen
+            // tbMaHoiDong
             // 
-            this.tbHoTen.Location = new System.Drawing.Point(116, 58);
-            this.tbHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.tbHoTen.Name = "tbHoTen";
-            this.tbHoTen.Size = new System.Drawing.Size(132, 22);
-            this.tbHoTen.TabIndex = 7;
+            this.tbMaHoiDong.Location = new System.Drawing.Point(116, 58);
+            this.tbMaHoiDong.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMaHoiDong.Name = "tbMaHoiDong";
+            this.tbMaHoiDong.Size = new System.Drawing.Size(132, 22);
+            this.tbMaHoiDong.TabIndex = 7;
             // 
-            // tbMSSV
+            // tbMaDoAn
             // 
-            this.tbMSSV.Location = new System.Drawing.Point(116, 25);
-            this.tbMSSV.Margin = new System.Windows.Forms.Padding(4);
-            this.tbMSSV.Name = "tbMSSV";
-            this.tbMSSV.Size = new System.Drawing.Size(132, 22);
-            this.tbMSSV.TabIndex = 6;
+            this.tbMaDoAn.Location = new System.Drawing.Point(116, 25);
+            this.tbMaDoAn.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMaDoAn.Name = "tbMaDoAn";
+            this.tbMaDoAn.Size = new System.Drawing.Size(132, 22);
+            this.tbMaDoAn.TabIndex = 6;
             // 
             // label5
             // 
@@ -148,30 +166,12 @@ namespace QuanLyDoAn
             this.label1.TabIndex = 0;
             this.label1.Text = "MaDoAn:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Năm:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(116, 140);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 15;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.cbChuNha);
-            this.groupBox2.Controls.Add(this.cbDiaChi);
-            this.groupBox2.Controls.Add(this.cbMSSV);
+            this.groupBox2.Controls.Add(this.btTim);
+            this.groupBox2.Controls.Add(this.cbNam);
+            this.groupBox2.Controls.Add(this.cbTenDoAn);
+            this.groupBox2.Controls.Add(this.cbMaDoAn);
             this.groupBox2.Location = new System.Drawing.Point(423, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -181,50 +181,50 @@ namespace QuanLyDoAn
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn thông tin tim kiếm";
             // 
-            // cbChuNha
+            // btTim
             // 
-            this.cbChuNha.AutoSize = true;
-            this.cbChuNha.Location = new System.Drawing.Point(20, 89);
-            this.cbChuNha.Margin = new System.Windows.Forms.Padding(4);
-            this.cbChuNha.Name = "cbChuNha";
-            this.cbChuNha.Size = new System.Drawing.Size(116, 21);
-            this.cbChuNha.TabIndex = 2;
-            this.cbChuNha.Text = "Tìm theo năm";
-            this.cbChuNha.UseVisualStyleBackColor = true;
+            this.btTim.Image = ((System.Drawing.Image)(resources.GetObject("btTim.Image")));
+            this.btTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTim.Location = new System.Drawing.Point(159, 130);
+            this.btTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btTim.Name = "btTim";
+            this.btTim.Size = new System.Drawing.Size(100, 27);
+            this.btTim.TabIndex = 4;
+            this.btTim.Text = "Tìm";
+            this.btTim.UseVisualStyleBackColor = true;
             // 
-            // cbDiaChi
+            // cbNam
             // 
-            this.cbDiaChi.AutoSize = true;
-            this.cbDiaChi.Location = new System.Drawing.Point(20, 53);
-            this.cbDiaChi.Margin = new System.Windows.Forms.Padding(4);
-            this.cbDiaChi.Name = "cbDiaChi";
-            this.cbDiaChi.Size = new System.Drawing.Size(149, 21);
-            this.cbDiaChi.TabIndex = 1;
-            this.cbDiaChi.Text = "Tìm theo tên đồ án";
-            this.cbDiaChi.UseVisualStyleBackColor = true;
+            this.cbNam.AutoSize = true;
+            this.cbNam.Location = new System.Drawing.Point(20, 89);
+            this.cbNam.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(116, 21);
+            this.cbNam.TabIndex = 2;
+            this.cbNam.Text = "Tìm theo năm";
+            this.cbNam.UseVisualStyleBackColor = true;
             // 
-            // cbMSSV
+            // cbTenDoAn
             // 
-            this.cbMSSV.AutoSize = true;
-            this.cbMSSV.Location = new System.Drawing.Point(20, 20);
-            this.cbMSSV.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMSSV.Name = "cbMSSV";
-            this.cbMSSV.Size = new System.Drawing.Size(148, 21);
-            this.cbMSSV.TabIndex = 0;
-            this.cbMSSV.Text = "Tìm theo mã đồ án";
-            this.cbMSSV.UseVisualStyleBackColor = true;
+            this.cbTenDoAn.AutoSize = true;
+            this.cbTenDoAn.Location = new System.Drawing.Point(20, 53);
+            this.cbTenDoAn.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTenDoAn.Name = "cbTenDoAn";
+            this.cbTenDoAn.Size = new System.Drawing.Size(149, 21);
+            this.cbTenDoAn.TabIndex = 1;
+            this.cbTenDoAn.Text = "Tìm theo tên đồ án";
+            this.cbTenDoAn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // cbMaDoAn
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(159, 130);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cbMaDoAn.AutoSize = true;
+            this.cbMaDoAn.Location = new System.Drawing.Point(20, 20);
+            this.cbMaDoAn.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMaDoAn.Name = "cbMaDoAn";
+            this.cbMaDoAn.Size = new System.Drawing.Size(148, 21);
+            this.cbMaDoAn.TabIndex = 0;
+            this.cbMaDoAn.Text = "Tìm theo mã đồ án";
+            this.cbMaDoAn.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
@@ -241,20 +241,20 @@ namespace QuanLyDoAn
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(555, 189);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(146, 17);
+            this.linkLabel2.Size = new System.Drawing.Size(84, 17);
             this.linkLabel2.TabIndex = 4;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Quản  lý giáo viên HD";
+            this.linkLabel2.Text = "Quản  lý lớp";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Location = new System.Drawing.Point(384, 213);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(80, 17);
+            this.linkLabel3.Size = new System.Drawing.Size(142, 17);
             this.linkLabel3.TabIndex = 5;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Quản lý lớp";
+            this.linkLabel3.Text = "Quản lý giáo viên HD";
             // 
             // linkLabel4
             // 
@@ -352,7 +352,7 @@ namespace QuanLyDoAn
             this.dataGridView1.Size = new System.Drawing.Size(701, 161);
             this.dataGridView1.TabIndex = 8;
             // 
-            // Form4
+            // Doan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,7 +365,7 @@ namespace QuanLyDoAn
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form4";
+            this.Name = "Doan";
             this.Text = "Quan ly do an";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
@@ -383,19 +383,19 @@ namespace QuanLyDoAn
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btLamMoi;
-        private System.Windows.Forms.TextBox tbQue;
-        private System.Windows.Forms.TextBox tbHoTen;
-        private System.Windows.Forms.TextBox tbMSSV;
+        private System.Windows.Forms.TextBox tbTenDoAn;
+        private System.Windows.Forms.TextBox tbMaHoiDong;
+        private System.Windows.Forms.TextBox tbMaDoAn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNam;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox cbChuNha;
-        private System.Windows.Forms.CheckBox cbDiaChi;
-        private System.Windows.Forms.CheckBox cbMSSV;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbNam;
+        private System.Windows.Forms.CheckBox cbTenDoAn;
+        private System.Windows.Forms.CheckBox cbMaDoAn;
+        private System.Windows.Forms.Button btTim;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;

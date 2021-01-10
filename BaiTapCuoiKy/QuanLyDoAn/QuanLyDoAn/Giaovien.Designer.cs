@@ -31,29 +31,29 @@ namespace QuanLyDoAn
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giaovien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbViTriDay = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btLamMoi = new System.Windows.Forms.Button();
-            this.tbLop = new System.Windows.Forms.TextBox();
-            this.tbQue = new System.Windows.Forms.TextBox();
-            this.tbHoTen = new System.Windows.Forms.TextBox();
-            this.tbMSSV = new System.Windows.Forms.TextBox();
+            this.tbHocVi = new System.Windows.Forms.TextBox();
+            this.tbSDT = new System.Windows.Forms.TextBox();
+            this.tbTenGV = new System.Windows.Forms.TextBox();
+            this.tbMaGV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btTim = new System.Windows.Forms.Button();
-            this.cbHoTen = new System.Windows.Forms.CheckBox();
-            this.cbMSSV = new System.Windows.Forms.CheckBox();
+            this.cbHocVi = new System.Windows.Forms.CheckBox();
+            this.cbTenGV = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btIn = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,15 +63,15 @@ namespace QuanLyDoAn
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbViTriDay);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btLamMoi);
-            this.groupBox1.Controls.Add(this.tbLop);
-            this.groupBox1.Controls.Add(this.tbQue);
-            this.groupBox1.Controls.Add(this.tbHoTen);
-            this.groupBox1.Controls.Add(this.tbMSSV);
+            this.groupBox1.Controls.Add(this.tbHocVi);
+            this.groupBox1.Controls.Add(this.tbSDT);
+            this.groupBox1.Controls.Add(this.tbTenGV);
+            this.groupBox1.Controls.Add(this.tbMaGV);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -85,6 +85,42 @@ namespace QuanLyDoAn
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
             // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(116, 128);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(176, 22);
+            this.tbEmail.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Email:";
+            // 
+            // tbViTriDay
+            // 
+            this.tbViTriDay.Location = new System.Drawing.Point(116, 96);
+            this.tbViTriDay.Margin = new System.Windows.Forms.Padding(4);
+            this.tbViTriDay.Name = "tbViTriDay";
+            this.tbViTriDay.Size = new System.Drawing.Size(132, 22);
+            this.tbViTriDay.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Vị trí dạy:";
+            // 
             // btLamMoi
             // 
             this.btLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btLamMoi.Image")));
@@ -97,37 +133,37 @@ namespace QuanLyDoAn
             this.btLamMoi.Text = "Làm mới";
             this.btLamMoi.UseVisualStyleBackColor = true;
             // 
-            // tbLop
+            // tbHocVi
             // 
-            this.tbLop.Location = new System.Drawing.Point(116, 196);
-            this.tbLop.Margin = new System.Windows.Forms.Padding(4);
-            this.tbLop.Name = "tbLop";
-            this.tbLop.Size = new System.Drawing.Size(113, 22);
-            this.tbLop.TabIndex = 12;
+            this.tbHocVi.Location = new System.Drawing.Point(116, 196);
+            this.tbHocVi.Margin = new System.Windows.Forms.Padding(4);
+            this.tbHocVi.Name = "tbHocVi";
+            this.tbHocVi.Size = new System.Drawing.Size(113, 22);
+            this.tbHocVi.TabIndex = 12;
             // 
-            // tbQue
+            // tbSDT
             // 
-            this.tbQue.Location = new System.Drawing.Point(116, 158);
-            this.tbQue.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQue.Name = "tbQue";
-            this.tbQue.Size = new System.Drawing.Size(176, 22);
-            this.tbQue.TabIndex = 11;
+            this.tbSDT.Location = new System.Drawing.Point(116, 158);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(176, 22);
+            this.tbSDT.TabIndex = 11;
             // 
-            // tbHoTen
+            // tbTenGV
             // 
-            this.tbHoTen.Location = new System.Drawing.Point(116, 58);
-            this.tbHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.tbHoTen.Name = "tbHoTen";
-            this.tbHoTen.Size = new System.Drawing.Size(176, 22);
-            this.tbHoTen.TabIndex = 7;
+            this.tbTenGV.Location = new System.Drawing.Point(116, 58);
+            this.tbTenGV.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTenGV.Name = "tbTenGV";
+            this.tbTenGV.Size = new System.Drawing.Size(176, 22);
+            this.tbTenGV.TabIndex = 7;
             // 
-            // tbMSSV
+            // tbMaGV
             // 
-            this.tbMSSV.Location = new System.Drawing.Point(116, 25);
-            this.tbMSSV.Margin = new System.Windows.Forms.Padding(4);
-            this.tbMSSV.Name = "tbMSSV";
-            this.tbMSSV.Size = new System.Drawing.Size(132, 22);
-            this.tbMSSV.TabIndex = 6;
+            this.tbMaGV.Location = new System.Drawing.Point(116, 25);
+            this.tbMaGV.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMaGV.Name = "tbMaGV";
+            this.tbMaGV.Size = new System.Drawing.Size(132, 22);
+            this.tbMaGV.TabIndex = 6;
             // 
             // label6
             // 
@@ -172,8 +208,8 @@ namespace QuanLyDoAn
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btTim);
-            this.groupBox2.Controls.Add(this.cbHoTen);
-            this.groupBox2.Controls.Add(this.cbMSSV);
+            this.groupBox2.Controls.Add(this.cbHocVi);
+            this.groupBox2.Controls.Add(this.cbTenGV);
             this.groupBox2.Location = new System.Drawing.Point(388, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -195,27 +231,27 @@ namespace QuanLyDoAn
             this.btTim.Text = "Tìm";
             this.btTim.UseVisualStyleBackColor = true;
             // 
-            // cbHoTen
+            // cbHocVi
             // 
-            this.cbHoTen.AutoSize = true;
-            this.cbHoTen.Location = new System.Drawing.Point(27, 62);
-            this.cbHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.cbHoTen.Name = "cbHoTen";
-            this.cbHoTen.Size = new System.Drawing.Size(126, 21);
-            this.cbHoTen.TabIndex = 1;
-            this.cbHoTen.Text = "Tìm theo học vị";
-            this.cbHoTen.UseVisualStyleBackColor = true;
+            this.cbHocVi.AutoSize = true;
+            this.cbHocVi.Location = new System.Drawing.Point(27, 62);
+            this.cbHocVi.Margin = new System.Windows.Forms.Padding(4);
+            this.cbHocVi.Name = "cbHocVi";
+            this.cbHocVi.Size = new System.Drawing.Size(126, 21);
+            this.cbHocVi.TabIndex = 1;
+            this.cbHocVi.Text = "Tìm theo học vị";
+            this.cbHocVi.UseVisualStyleBackColor = true;
             // 
-            // cbMSSV
+            // cbTenGV
             // 
-            this.cbMSSV.AutoSize = true;
-            this.cbMSSV.Location = new System.Drawing.Point(27, 25);
-            this.cbMSSV.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMSSV.Name = "cbMSSV";
-            this.cbMSSV.Size = new System.Drawing.Size(133, 21);
-            this.cbMSSV.TabIndex = 0;
-            this.cbMSSV.Text = "Tìm theo tên GV";
-            this.cbMSSV.UseVisualStyleBackColor = true;
+            this.cbTenGV.AutoSize = true;
+            this.cbTenGV.Location = new System.Drawing.Point(27, 25);
+            this.cbTenGV.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTenGV.Name = "cbTenGV";
+            this.cbTenGV.Size = new System.Drawing.Size(133, 21);
+            this.cbTenGV.TabIndex = 0;
+            this.cbTenGV.Text = "Tìm theo tên GV";
+            this.cbTenGV.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -293,42 +329,6 @@ namespace QuanLyDoAn
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 94);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Vị trí dạy:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(116, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 128);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Email:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(116, 128);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 22);
-            this.textBox2.TabIndex = 17;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -364,27 +364,27 @@ namespace QuanLyDoAn
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btLamMoi;
-        private System.Windows.Forms.TextBox tbLop;
-        private System.Windows.Forms.TextBox tbQue;
-        private System.Windows.Forms.TextBox tbHoTen;
-        private System.Windows.Forms.TextBox tbMSSV;
+        private System.Windows.Forms.TextBox tbHocVi;
+        private System.Windows.Forms.TextBox tbSDT;
+        private System.Windows.Forms.TextBox tbTenGV;
+        private System.Windows.Forms.TextBox tbMaGV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btTim;
-        private System.Windows.Forms.CheckBox cbHoTen;
-        private System.Windows.Forms.CheckBox cbMSSV;
+        private System.Windows.Forms.CheckBox cbHocVi;
+        private System.Windows.Forms.CheckBox cbTenGV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btIn;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btCapNhat;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btThem;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbViTriDay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
