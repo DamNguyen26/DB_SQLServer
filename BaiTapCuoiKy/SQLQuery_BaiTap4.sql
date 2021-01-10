@@ -116,8 +116,8 @@ CREATE PROCEDURE sp_ThongKe
 AS
 BEGIN
 	SELECT tblSV.MaSV, tblSV.TenSV, tblSV.GioiTinh, tblSV.NamSinh, tblSV.MaLop, tblSV.Email, tblLop.KhoaDaoTao, tblGV.TenGV, tblDoAnSV.Diem
-    FROM tblSV 
-    INNER JOIN tblLop ON tblSV.MaLop = tblLop.MaLop
-    INNER JOIN tblGV ON tblBTL_SV.MaGV = tblGV.MaGV
-    INNER JOIN tblDoAn ON tblBTL_SV.MaMH = tblMH.MaMH
+    FROM tblDoAnSV 
+    INNER JOIN tblSV ON tblDoAnSV.MaSV = tblSV.MaSV
+    INNER JOIN tblLop ON tblDoAnSV.MaLop = tblLop.MaLop
+    INNER JOIN tblDoAn ON tblDoAnSV.MaDoAn = tblDoAn.MaDoAn
 END
