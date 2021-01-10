@@ -24,7 +24,7 @@ CREATE TABLE tblSV(
     GioiTinh nvarchar(3)CHECK ( GioiTinh=N'Nam' or GioiTinh=N'Nữ'  ),  
     Email nvarchar(30) NOT NULL, 
     SDT int NOT NULL,
-    FOREIGN KEY (MaLop) REFERENCES tblLop(MaLop)
+    
 )
 INSERT INTO tblSV(MaSV, MaLop, TenSV, NamSinh, GioiTinh, Email, SDT) VALUES
     ('SV001', '60TH1', 'Vũ Minh', '2000', 'Nam', 'damnguyen26@gmail.com', '03985716'),
@@ -44,6 +44,7 @@ CREATE TABLE tblLop(
     KhoaDaoTao int NOT NULL,
     BacDaoTao nvarchar(30) NOT NULL,
     SoSV int NOT NULL,
+    FOREIGN KEY (MaLop) REFERENCES tblSV(MaLop)
     FOREIGN KEY (MaGV) REFERENCES tblGV(MaGV)
 )
 INSERT INTO tblLop(MaLop, MaGV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
@@ -120,13 +121,6 @@ INSERT INTO tblDoAnSV(MaSV, MaLop, MaDoAn, Diem) VALUES
 	('SV005', '60PM1', 'DA005', '8'),
 	('SV006', '60PM1', 'DA006', '9');
 
--- đếm số sinh viên tham gia bảo vệ đồ án
-CREATE PROCEDURE sp_SoSV
-AS
-BEGIN
-SELECT COUNT(*) FROM tblSV
-END
-
 -- đếm số sinh viên là nữ hoặc nam 
 CREATE PROCEDURE sp_GioiTinhNam
 AS 
@@ -153,3 +147,15 @@ BEGIN
     INNER JOIN tblLop ON tblDoAnSV.MaLop = tblLop.MaLop
     INNER JOIN tblDoAn ON tblDoAnSV.MaDoAn = tblDoAn.MaDoAn
 END
+
+-- hàm tổng số sinh viên trong từng lớp
+CREATE FUNCTION SoSV()
+RETURNS @SoSinhVien table (malop nvarchar(50), sosv int)
+as
+begin
+insert into @siso
+select MaLop, COUNT(MaSV)
+from tblSV
+group by MaLop
+return
+end
