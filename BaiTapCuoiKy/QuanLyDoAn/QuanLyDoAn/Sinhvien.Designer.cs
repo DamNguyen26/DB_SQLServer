@@ -31,8 +31,9 @@ namespace QuanLyDoAn
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sinhvien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btLamMoi = new System.Windows.Forms.Button();
             this.tbLop = new System.Windows.Forms.TextBox();
-            this.tbQue = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.rdNu = new System.Windows.Forms.RadioButton();
             this.rdNam = new System.Windows.Forms.RadioButton();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +45,6 @@ namespace QuanLyDoAn
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btLamMoi = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btTim = new System.Windows.Forms.Button();
             this.cbLop = new System.Windows.Forms.CheckBox();
@@ -67,7 +67,7 @@ namespace QuanLyDoAn
             // 
             this.groupBox1.Controls.Add(this.btLamMoi);
             this.groupBox1.Controls.Add(this.tbLop);
-            this.groupBox1.Controls.Add(this.tbQue);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.rdNu);
             this.groupBox1.Controls.Add(this.rdNam);
             this.groupBox1.Controls.Add(this.dtNgaySinh);
@@ -88,6 +88,18 @@ namespace QuanLyDoAn
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sinh viên";
             // 
+            // btLamMoi
+            // 
+            this.btLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btLamMoi.Image")));
+            this.btLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLamMoi.Location = new System.Drawing.Point(247, 194);
+            this.btLamMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.btLamMoi.Name = "btLamMoi";
+            this.btLamMoi.Size = new System.Drawing.Size(112, 28);
+            this.btLamMoi.TabIndex = 13;
+            this.btLamMoi.Text = "Làm mới";
+            this.btLamMoi.UseVisualStyleBackColor = true;
+            // 
             // tbLop
             // 
             this.tbLop.Location = new System.Drawing.Point(116, 196);
@@ -96,13 +108,13 @@ namespace QuanLyDoAn
             this.tbLop.Size = new System.Drawing.Size(87, 22);
             this.tbLop.TabIndex = 12;
             // 
-            // tbQue
+            // tbEmail
             // 
-            this.tbQue.Location = new System.Drawing.Point(116, 158);
-            this.tbQue.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQue.Name = "tbQue";
-            this.tbQue.Size = new System.Drawing.Size(176, 22);
-            this.tbQue.TabIndex = 11;
+            this.tbEmail.Location = new System.Drawing.Point(116, 158);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(176, 22);
+            this.tbEmail.TabIndex = 11;
             // 
             // rdNu
             // 
@@ -212,18 +224,6 @@ namespace QuanLyDoAn
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "MSSV:";
-            // 
-            // btLamMoi
-            // 
-            this.btLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btLamMoi.Image")));
-            this.btLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLamMoi.Location = new System.Drawing.Point(247, 194);
-            this.btLamMoi.Margin = new System.Windows.Forms.Padding(4);
-            this.btLamMoi.Name = "btLamMoi";
-            this.btLamMoi.Size = new System.Drawing.Size(112, 28);
-            this.btLamMoi.TabIndex = 13;
-            this.btLamMoi.Text = "Làm mới";
-            this.btLamMoi.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -372,7 +372,7 @@ namespace QuanLyDoAn
             this.dataGridView1.Size = new System.Drawing.Size(670, 192);
             this.dataGridView1.TabIndex = 4;
             // 
-            // Form3
+            // Sinhvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -381,7 +381,7 @@ namespace QuanLyDoAn
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form3";
+            this.Name = "Sinhvien";
             this.Text = "Quan ly Sinh Vien";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -398,7 +398,7 @@ namespace QuanLyDoAn
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btLamMoi;
         private System.Windows.Forms.TextBox tbLop;
-        private System.Windows.Forms.TextBox tbQue;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.RadioButton rdNu;
         private System.Windows.Forms.RadioButton rdNam;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
