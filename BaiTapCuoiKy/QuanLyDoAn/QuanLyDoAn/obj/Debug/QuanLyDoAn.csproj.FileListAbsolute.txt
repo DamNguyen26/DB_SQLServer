@@ -1,0 +1,14 @@
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\bin\Debug\QuanLyDoAn.exe.config
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\bin\Debug\QuanLyDoAn.exe
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\bin\Debug\QuanLyDoAn.pdb
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.csprojAssemblyReference.cache
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Dangnhap.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Form2.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Lop.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Sinhvien.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Doan.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.Properties.Resources.resources
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.csproj.GenerateResource.cache
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.csproj.CoreCompileInputs.cache
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.exe
+C:\Users\MyPC\source\repos\QuanLyDoAn\QuanLyDoAn\obj\Debug\QuanLyDoAn.pdb
