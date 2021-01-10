@@ -88,13 +88,6 @@ INSERT INTO tblLop(MaLop, MaGV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
     ('a', 'b', 'c', 'd', 'e', 'f'),
     ('a', 'b', 'c', 'd', 'e', 'f');
 
--- đếm số sinh viên tham gia bảo vệ đồ án
-CREATE PROCEDURE sp_SoSV
-AS
-BEGIN
-SELECT COUNT(*) FROM tblSV
-END
-
 -- đếm số sinh viên là nữ hoặc nam 
 CREATE PROCEDURE sp_GioiTinhNam
 AS 
@@ -121,3 +114,15 @@ BEGIN
     INNER JOIN tblLop ON tblDoAnSV.MaLop = tblLop.MaLop
     INNER JOIN tblDoAn ON tblDoAnSV.MaDoAn = tblDoAn.MaDoAn
 END
+
+-- hàm tổng số sinh viên trong từng lớp
+CREATE FUNCTION SoSV()
+RETURNS @SoSinhVien table (malop nvarchar(50), sosv int)
+as
+begin
+insert into @siso
+select MaLop, COUNT(MaSV)
+from tblSV
+group by MaLop
+return
+end
