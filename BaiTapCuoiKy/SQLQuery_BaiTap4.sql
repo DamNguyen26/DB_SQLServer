@@ -13,7 +13,8 @@ CREATE TABLE tblSV(
         MaLop
     ),
     TenSV NOT NULL, 
-    NamSinh NOT NULL, 
+    NamSinh NOT NULL,
+    GioiTinh NOT NULL,
     Email NOT NULL, 
     SDT NOT NULL,
     FOREIGN KEY (MaLop) REFERENCES tblLop(MaLop)
@@ -28,7 +29,6 @@ CREATE TABLE tblLop(
     TenLop NOT NULL,
     KhoaDaoTao NOT NULL,
     BacDaoTao NOT NULL,
-    SoSV NOT NULL,
     FOREIGN KEY (MaGV) REFERENCES tblGV(MaGV)
 )
 CREATE TABLE tblGV(
@@ -88,39 +88,36 @@ INSERT INTO tblLop(MaLop, MaGV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
     ('a', 'b', 'c', 'd', 'e', 'f'),
     ('a', 'b', 'c', 'd', 'e', 'f');
 
+-- đếm số sinh viên tham gia bảo vệ đồ án
 CREATE PROCEDURE sp_SoSV
 AS
 BEGIN
+SELECT COUNT(*) FROM tblSV
+END
 
-declare contro cursor
-scroll
-FOR
-select tblLop.MaLop,count(MaSV)
-	from tblLop inner join tblSV on tblLop.MaLop = tblSV.MaLop group by tblLop.MaLop
-open contro
-declare @malop nvarchar(50), @sosv int
-fetch next from contro into @malop, @sosv
-while(@@FETCH_STATUS = 0)
-begin
-	update tblLop
-	set SoSV = @sosv
-	where MaLop = @malop
-	fetch next from contro into @malop, @sosv
-end
-close contro
-deallocate contro
-end
+-- đếm số sinh viên là nữ hoặc nam 
+CREATE PROCEDURE sp_GioiTinhNam
+AS 
+BEGIN 
+SELECT COUNT(*) FROM tblSV
+WHERE GioiTinh = 'Nam'
+END
 
-CREATE PROCEDURE sp_thongke1 (@malop nvarchar(50), @mamh nvarchar(50))
-as
-begin
-	select tblSV.MaSV, tblSV.TenSV, tblSV.NamSinh, tblSV.MaLop, tblSV.Email, tblLop.KhoaDaoTao, tblBTL.TenBTL, tblMH.TenMH, tblGV.TenGV,tblBTL_SV.Diem, tblBTL.Nam
-	from tblSV 
-    inner join tblLop on tblSV.MaLop = tblLop.MaLop
-    inner join tblBTL_SV on tblSV.MaSV = tblBTL_SV.MaSV
-    inner join tblBTL on tblBTL_SV.MaBTL = tblBTL.MaBTL
-    inner join tblGV on tblBTL_SV.MaGV = tblGV.MaGV
-    inner join tblMH on tblBTL_SV.MaMH = tblMH.MaMH
-	where tblLop.MaLop = @malop and tblMH.MaMH = @mamh
-end
+-- đếm số sinh viên là nữ 
+CREATE PROCEDURE sp_GioiTinhNu
+AS 
+BEGIN 
+SELECT COUNT(*) FROM tblSV
+WHERE GioiTinh = 'Nu'
+END
 
+-- thống kê danh sách sinh viên thực hiện đồ án theo lớp và giáo viên 
+CREATE PROCEDURE sp_ThongKe 
+AS
+BEGIN
+	SELECT tblSV.MaSV, tblSV.TenSV, tblSV.GioiTinh, tblSV.NamSinh, tblSV.MaLop, tblSV.Email, tblLop.KhoaDaoTao, tblGV.TenGV, tblDoAnSV.Diem
+    FROM tblSV 
+    INNER JOIN tblLop ON tblSV.MaLop = tblLop.MaLop
+    INNER JOIN tblGV ON tblBTL_SV.MaGV = tblGV.MaGV
+    INNER JOIN tblDoAn ON tblBTL_SV.MaMH = tblMH.MaMH
+END
