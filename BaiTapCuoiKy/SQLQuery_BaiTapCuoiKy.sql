@@ -96,7 +96,7 @@ INSERT INTO DoAn(MaDoAn, MaHoiDong, TenDoAn, Nam) VALUES
 	('DA006', 'HD006', 'TÌM HIỂU, NGHIÊN CỨU MỘT SỐ KIỂU TẤN CÔNG MẠNG', '2020');
 
 CREATE TABLE DoAnSV(
-	Id int Identity(1,1) primary key,
+	Id int IDENTITY(1,1) PRIMARY KEY,
 	MaSV char(10) NOT NULL,
     MaLop char(10) NOT NULL,
     MaDoAn char(10) NOT NULL, 
