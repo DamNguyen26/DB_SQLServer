@@ -89,9 +89,11 @@ INSERT INTO DoAn(MaDoAn, MaHoiDong, TenDoAn, Nam) VALUES
 	('DA006', 'HD006', 'TÌM HIỂU, NGHIÊN CỨU MỘT SỐ KIỂU TẤN CÔNG MẠNG', '2020');
 CREATE TABLE DoAnSV(
 	Id int Identity(1,1) primary key,
+	MaSV char(10) NOT NULL,
     MaLop char(10) NOT NULL,
     MaDoAn char(10) NOT NULL, 
     Diem int NOT NULL,
+	FOREIGN KEY (MaSV) REFERENCES SV(MaSV),
     FOREIGN KEY (MaLop) REFERENCES Lop(MaLop),
     FOREIGN KEY (MaDoAn) REFERENCES DoAn(MaDoAn)
 )
