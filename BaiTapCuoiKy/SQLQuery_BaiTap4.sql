@@ -28,7 +28,7 @@ INSERT INTO SV(MaSV, TenSV, NamSinh, GioiTinh, Email, SDT) VALUES
     ('SV005', 'Đào Hoàng Long', '2000', 'Nữ', 'nguyen2512@gmail.com', '03456981'),
     ('SV006', 'Vũ Bá Thọ', '2000', 'Nữ', 'tungle2909@gmail.com','03126527');
 CREATE TABLE Lop(
-    MaLop char(10) NOT NULL,
+    MaLop char(10) unique NOT NULL,
     MaGV char(10) NOT NULL,
     MaSV char(10) NOT NULL,
     PRIMARY KEY(
@@ -40,7 +40,8 @@ CREATE TABLE Lop(
     KhoaDaoTao int NOT NULL,
     BacDaoTao nvarchar(30) NOT NULL,
     SoSV int NOT NULL,
-    FOREIGN KEY (MaSV) REFERENCES SV(MaSV)
+    FOREIGN KEY (MaSV) REFERENCES SV(MaSV),
+	FOREIGN KEY (MaGV) REFERENCES GV(MaGV)
 )
 INSERT INTO Lop(MaLop, MaGV, MaSV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
     ('60TH1', '001', '001', 'TH1', '60', 'Đại học', '6'),
@@ -56,7 +57,6 @@ CREATE TABLE GV(
     Email nvarchar(30) NOT NULL, 
     SDT int NOT NULL, 
     HocVi nvarchar(30) NOT NULL,
-    FOREIGN KEY (MaGV) REFERENCES GV(MaGV)
 )
 INSERT INTO GV(MaGV, TenGV, ViTriDay, Email, SDT, HocVi) VALUES
     ('001', 'Nguyễn Mạnh Hiển', 'Kinh tế và quản lý', 'Nmhien1234@tlu.edu.vn', '09876543', 'Giáo sư'),
@@ -78,7 +78,7 @@ INSERT INTO HoiDong(MaHoiDong, ChuTichHD, SoLuong) VALUES
     ('HD005', 'Nguyễn Tuấn Thành', '7'),
     ('HD006', 'Nguyễn Viết Xuân', '6');
 CREATE TABLE DoAn(
-    MaDoAn char(10) NOT NULL,
+    MaDoAn char(10) unique NOT NULL,
     MaHoiDong char(10) NOT NULL,
     PRIMARY KEY(
         MaDoAn, 
@@ -96,16 +96,15 @@ INSERT INTO DoAn(MaDoAn, MaHoiDong, TenDoAn, Nam) VALUES
 	('DA005', 'HD005', 'SQL QUẢN LÝ THƯ VIỆN', '2020'),
 	('DA006', 'HD006', 'TÌM HIỂU, NGHIÊN CỨU MỘT SỐ KIỂU TẤN CÔNG MẠNG', '2020');
 CREATE TABLE DoAnSV(
-    MaSV char(10) NOT NULL, 
+	Id int Identity(1,1),
     MaLop char(10) NOT NULL,
     MaDoAn char(10) NOT NULL, 
     PRIMARY KEY(
-        MaSV, 
+		Id,
         MaLop,
         MaDoAn
     ),
     Diem int NOT NULL,
-    FOREIGN KEY (MaSV) REFERENCES SV(MaSV),
     FOREIGN KEY (MaLop) REFERENCES Lop(MaLop),
     FOREIGN KEY (MaDoAn) REFERENCES DoAn(MaDoAn)
 )
