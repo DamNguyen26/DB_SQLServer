@@ -28,14 +28,9 @@ INSERT INTO SV(MaSV, TenSV, NamSinh, GioiTinh, Email, SDT) VALUES
     ('SV005', 'Đào Hoàng Long', '2000', 'Nữ', 'nguyen2512@gmail.com', '03456981'),
     ('SV006', 'Vũ Bá Thọ', '2000', 'Nữ', 'tungle2909@gmail.com','03126527');
 CREATE TABLE Lop(
-    MaLop char(10) unique NOT NULL,
+    MaLop char(10) NOT NULL PRIMARY KEY,
     MaGV char(10) NOT NULL,
     MaSV char(10) NOT NULL,
-    PRIMARY KEY(
-        MaLop, 
-        MaGV,
-        MaSV
-    ),
     TenLop nvarchar(30) NOT NULL,
     KhoaDaoTao int NOT NULL,
     BacDaoTao nvarchar(30) NOT NULL,
@@ -77,13 +72,10 @@ INSERT INTO HoiDong(MaHoiDong, ChuTichHD, SoLuong) VALUES
     ('HD004', 'Kiều Tuấn Dũng', '5'),
     ('HD005', 'Nguyễn Tuấn Thành', '7'),
     ('HD006', 'Nguyễn Viết Xuân', '6');
+
 CREATE TABLE DoAn(
-    MaDoAn char(10) unique NOT NULL,
+    MaDoAn char(10) NOT NULL PRIMARY KEY,
     MaHoiDong char(10) NOT NULL,
-    PRIMARY KEY(
-        MaDoAn, 
-        MaHoiDong
-    ),
     TenDoAn nvarchar(30) NOT NULL, 
     Nam date NOT NULL,
     FOREIGN KEY (MaHoiDong) REFERENCES HoiDong(MaHoiDong)
@@ -96,14 +88,9 @@ INSERT INTO DoAn(MaDoAn, MaHoiDong, TenDoAn, Nam) VALUES
 	('DA005', 'HD005', 'SQL QUẢN LÝ THƯ VIỆN', '2020'),
 	('DA006', 'HD006', 'TÌM HIỂU, NGHIÊN CỨU MỘT SỐ KIỂU TẤN CÔNG MẠNG', '2020');
 CREATE TABLE DoAnSV(
-	Id int Identity(1,1),
+	Id int Identity(1,1) primary key,
     MaLop char(10) NOT NULL,
     MaDoAn char(10) NOT NULL, 
-    PRIMARY KEY(
-		Id,
-        MaLop,
-        MaDoAn
-    ),
     Diem int NOT NULL,
     FOREIGN KEY (MaLop) REFERENCES Lop(MaLop),
     FOREIGN KEY (MaDoAn) REFERENCES DoAn(MaDoAn)
