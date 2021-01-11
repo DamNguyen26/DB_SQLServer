@@ -1,9 +1,12 @@
 CREATE DATABASE QLDoAn
 CREATE TABLE TaiKhoan(
-    MaSV char(10) NOT NULL PRIMARY KEY,
+	Id int Identity(1,1) PRIMARY KEY,
+    MaSV char(10) NOT NULL,
+	MaGV char(10) NOT NULL,
     Email nvarchar(30) NOT NULL,
     Pass nvarchar(30) NOT NULL,
-    FOREIGN KEY (MaSV) REFERENCES SV(MaSV)
+    FOREIGN KEY (MaSV) REFERENCES SV(MaSV),
+	FOREIGN KEY (MaSV) REFERENCES SV(MaSV)
 )
 INSERT INTO TaiKhoan(MaSV, Email, Pass) VALUES
     ('SV001', 'damnguyen26@gmail.com', 'abcabc'),
@@ -12,6 +15,7 @@ INSERT INTO TaiKhoan(MaSV, Email, Pass) VALUES
     ('SV004', 'dammit2909@gmail.com', 'abcabc'),
     ('SV005', 'nguyen2512@gmail.com', '12345678'),
     ('SV006', 'tungle2909@gmail.com', '12345678');
+
 CREATE TABLE SV(
     MaSV char(10) NOT NULL PRIMARY KEY,
     TenSV nvarchar(30) NOT NULL, 
@@ -27,6 +31,7 @@ INSERT INTO SV(MaSV, TenSV, NamSinh, GioiTinh, Email, SDT) VALUES
     ('SV004', 'Lê Thanh Tùng', '2000', 'Nam', 'dammit2909@gmail.com', '03123456'),
     ('SV005', 'Đào Hoàng Long', '2000', 'Nữ', 'nguyen2512@gmail.com', '03456981'),
     ('SV006', 'Vũ Bá Thọ', '2000', 'Nữ', 'tungle2909@gmail.com','03126527');
+
 CREATE TABLE Lop(
     MaLop char(10) NOT NULL PRIMARY KEY,
     MaGV char(10) NOT NULL,
@@ -45,6 +50,7 @@ INSERT INTO Lop(MaLop, MaGV, MaSV, TenLop, KhoaDaoTao, BacDaoTao, SoSV) VALUES
     ('60PM2', '004', '004', 'PM2', '60', 'Đại học', '8'),
     ('60PM1', '005', '005', 'PM1', '60', 'Đại học', '4'),
     ('60PM1', '006', '006', 'PM1', '60', 'Đại học', '9');
+
 CREATE TABLE GV(
     MaGV char(10) NOT NULL PRIMARY KEY, 
     TenGV nvarchar(30) NOT NULL, 
@@ -60,6 +66,7 @@ INSERT INTO GV(MaGV, TenGV, ViTriDay, Email, SDT, HocVi) VALUES
     ('004', 'Kiều Tuấn Dũng', 'Công nghệ phần mềm', 'ktdung123@tlu.edu.vn', '05678312', 'Phó giáo sư'),
     ('005', 'Lương Thị Hồng Lan', 'Công nghệ thông tin', 'LthLan@tlu.edu.vn', '09845123', 'Giáo sư'),
     ('006', 'Lương Thị Hồng Lan', 'Công nghệ thông tin', 'LthLan1234@tlu.edu.vn', '09246815', 'Giáo sư');
+
 CREATE TABLE HoiDong(
     MaHoiDong char(10) NOT NULL PRIMARY KEY,
     ChuTichHD nvarchar(30) NOT NULL, 
@@ -87,6 +94,7 @@ INSERT INTO DoAn(MaDoAn, MaHoiDong, TenDoAn, Nam) VALUES
 	('DA004', 'HD004', 'SQL QUẢN LÝ ĐỒ ÁN', '2018'),
 	('DA005', 'HD005', 'SQL QUẢN LÝ THƯ VIỆN', '2020'),
 	('DA006', 'HD006', 'TÌM HIỂU, NGHIÊN CỨU MỘT SỐ KIỂU TẤN CÔNG MẠNG', '2020');
+
 CREATE TABLE DoAnSV(
 	Id int Identity(1,1) primary key,
 	MaSV char(10) NOT NULL,
@@ -109,7 +117,7 @@ INSERT INTO DoAnSV(MaSV, MaLop, MaDoAn, Diem) VALUES
 CREATE PROCEDURE sp_GioiTinhNam
 AS 
 BEGIN 
-SELECT COUNT(*) FROM tblSV
+SELECT COUNT(*) FROM SV
 WHERE GioiTinh = 'Nam'
 END
 
@@ -117,7 +125,7 @@ END
 CREATE PROCEDURE sp_GioiTinhNu
 AS 
 BEGIN 
-SELECT COUNT(*) FROM tblSV
+SELECT COUNT(*) FROM SV
 WHERE GioiTinh = 'Nu'
 END
 
@@ -125,11 +133,11 @@ END
 CREATE PROCEDURE sp_ThongKe 
 AS
 BEGIN
-	SELECT tblSV.MaSV, tblSV.TenSV, tblSV.GioiTinh, tblSV.NamSinh, tblSV.MaLop, tblSV.Email, tblLop.KhoaDaoTao, tblGV.TenGV, tblDoAnSV.Diem
-    FROM tblDoAnSV 
-    INNER JOIN tblSV ON tblDoAnSV.MaSV = tblSV.MaSV
-    INNER JOIN tblLop ON tblDoAnSV.MaLop = tblLop.MaLop
-    INNER JOIN tblDoAn ON tblDoAnSV.MaDoAn = tblDoAn.MaDoAn
+	SELECT SV.Email, SV.GioiTinh, SV.MaSV, SV.NamSinh, SV.SDT, SV.TenSV, Lop.BacDaoTao, Lop.KhoaDaoTao, Lop.TenLop, DoAn.TenDoAn, DoAnSV.Diem
+    FROM DoAnSV 
+    INNER JOIN SV ON DoAnSV.MaSV = SV.MaSV
+    INNER JOIN Lop ON DoAnSV.MaLop = Lop.MaLop
+    INNER JOIN DoAn ON DoAnSV.MaDoAn = DoAn.MaDoAn
 END
 
 -- hàm tổng số sinh viên trong từng lớp
