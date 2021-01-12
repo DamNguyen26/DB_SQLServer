@@ -14,8 +14,8 @@ namespace QuanLyDoAn.Connec
             string datasource = @"MAYTINH - 2HU1F0P\SQLEXPRESS";
 
             string database = "QLDoAn";
-            string username = "";
-            string password = "";
+            string username = "SA";
+            string password = "12345";
 
             return DBSQLServerUtils.GetDBConnection(datasource, database, username, password);
         }

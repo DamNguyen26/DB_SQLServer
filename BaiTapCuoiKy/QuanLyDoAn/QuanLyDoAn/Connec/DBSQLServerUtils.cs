@@ -13,7 +13,7 @@ namespace QuanLyDoAn.Connec
                  GetDBConnection(string datasource, string database, string username, string password)
         {
             //
-            //  Data Source = MAYTINH - 2HU1F0P\SQLEXPRESS; Initial Catalog = QLDoAn; Integrated Security = True
+            //  Data Source=MAYTINH-2HU1F0P\SQLEXPRESS;Initial Catalog=QLDoAn;User ID=SA;Password=***********
             //
             string connString = @"Data Source=" + datasource + ";Initial Catalog="
                         + database + ";Persist Security Info=True;User ID=" + username + ";Password=" + password;
