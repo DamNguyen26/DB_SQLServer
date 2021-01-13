@@ -31,31 +31,31 @@ namespace QuanLyDoAn
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lop));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbKhoa = new System.Windows.Forms.ComboBox();
-            this.tbBacDaoTao = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbTenLop = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btLamMoi = new System.Windows.Forms.Button();
-            this.tbSoSV = new System.Windows.Forms.TextBox();
-            this.tbMaGV = new System.Windows.Forms.TextBox();
-            this.tbMaLop = new System.Windows.Forms.TextBox();
+            this.tbLop = new System.Windows.Forms.TextBox();
+            this.tbHoTen = new System.Windows.Forms.TextBox();
+            this.tbMSSV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btTim = new System.Windows.Forms.Button();
-            this.cbKhoa = new System.Windows.Forms.CheckBox();
-            this.cbTenLop = new System.Windows.Forms.CheckBox();
-            this.cbMaLop = new System.Windows.Forms.CheckBox();
+            this.cbLop = new System.Windows.Forms.CheckBox();
+            this.cbHoTen = new System.Windows.Forms.CheckBox();
+            this.cbMSSV = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btIn = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btTim = new System.Windows.Forms.Button();
+            this.btLamMoi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -64,15 +64,15 @@ namespace QuanLyDoAn
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbbKhoa);
-            this.groupBox1.Controls.Add(this.tbBacDaoTao);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.tbTenLop);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btLamMoi);
-            this.groupBox1.Controls.Add(this.tbSoSV);
-            this.groupBox1.Controls.Add(this.tbMaGV);
-            this.groupBox1.Controls.Add(this.tbMaLop);
+            this.groupBox1.Controls.Add(this.tbLop);
+            this.groupBox1.Controls.Add(this.tbHoTen);
+            this.groupBox1.Controls.Add(this.tbMSSV);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -86,93 +86,29 @@ namespace QuanLyDoAn
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
             // 
-            // cbbKhoa
+            // tbLop
             // 
-            this.cbbKhoa.FormattingEnabled = true;
-            this.cbbKhoa.Items.AddRange(new object[] {
-            "62",
-            "61",
-            "60",
-            "59",
-            "58",
-            "57"});
-            this.cbbKhoa.Location = new System.Drawing.Point(116, 125);
-            this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(121, 24);
-            this.cbbKhoa.TabIndex = 18;
+            this.tbLop.Location = new System.Drawing.Point(116, 196);
+            this.tbLop.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLop.Name = "tbLop";
+            this.tbLop.Size = new System.Drawing.Size(87, 22);
+            this.tbLop.TabIndex = 12;
             // 
-            // tbBacDaoTao
+            // tbHoTen
             // 
-            this.tbBacDaoTao.Location = new System.Drawing.Point(116, 161);
-            this.tbBacDaoTao.Margin = new System.Windows.Forms.Padding(4);
-            this.tbBacDaoTao.Name = "tbBacDaoTao";
-            this.tbBacDaoTao.Size = new System.Drawing.Size(132, 22);
-            this.tbBacDaoTao.TabIndex = 17;
+            this.tbHoTen.Location = new System.Drawing.Point(116, 58);
+            this.tbHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.tbHoTen.Name = "tbHoTen";
+            this.tbHoTen.Size = new System.Drawing.Size(132, 22);
+            this.tbHoTen.TabIndex = 7;
             // 
-            // label4
+            // tbMSSV
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 128);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Khóa đào tạo:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // tbTenLop
-            // 
-            this.tbTenLop.Location = new System.Drawing.Point(116, 89);
-            this.tbTenLop.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTenLop.Name = "tbTenLop";
-            this.tbTenLop.Size = new System.Drawing.Size(176, 22);
-            this.tbTenLop.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Tên lớp:";
-            // 
-            // btLamMoi
-            // 
-            this.btLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btLamMoi.Image")));
-            this.btLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLamMoi.Location = new System.Drawing.Point(247, 194);
-            this.btLamMoi.Margin = new System.Windows.Forms.Padding(4);
-            this.btLamMoi.Name = "btLamMoi";
-            this.btLamMoi.Size = new System.Drawing.Size(112, 28);
-            this.btLamMoi.TabIndex = 13;
-            this.btLamMoi.Text = "Làm mới";
-            this.btLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // tbSoSV
-            // 
-            this.tbSoSV.Location = new System.Drawing.Point(116, 196);
-            this.tbSoSV.Margin = new System.Windows.Forms.Padding(4);
-            this.tbSoSV.Name = "tbSoSV";
-            this.tbSoSV.Size = new System.Drawing.Size(87, 22);
-            this.tbSoSV.TabIndex = 12;
-            // 
-            // tbMaGV
-            // 
-            this.tbMaGV.Location = new System.Drawing.Point(116, 58);
-            this.tbMaGV.Margin = new System.Windows.Forms.Padding(4);
-            this.tbMaGV.Name = "tbMaGV";
-            this.tbMaGV.Size = new System.Drawing.Size(132, 22);
-            this.tbMaGV.TabIndex = 7;
-            // 
-            // tbMaLop
-            // 
-            this.tbMaLop.Location = new System.Drawing.Point(116, 25);
-            this.tbMaLop.Margin = new System.Windows.Forms.Padding(4);
-            this.tbMaLop.Name = "tbMaLop";
-            this.tbMaLop.Size = new System.Drawing.Size(132, 22);
-            this.tbMaLop.TabIndex = 6;
+            this.tbMSSV.Location = new System.Drawing.Point(116, 25);
+            this.tbMSSV.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMSSV.Name = "tbMSSV";
+            this.tbMSSV.Size = new System.Drawing.Size(132, 22);
+            this.tbMSSV.TabIndex = 6;
             // 
             // label6
             // 
@@ -217,9 +153,9 @@ namespace QuanLyDoAn
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btTim);
-            this.groupBox2.Controls.Add(this.cbKhoa);
-            this.groupBox2.Controls.Add(this.cbTenLop);
-            this.groupBox2.Controls.Add(this.cbMaLop);
+            this.groupBox2.Controls.Add(this.cbLop);
+            this.groupBox2.Controls.Add(this.cbHoTen);
+            this.groupBox2.Controls.Add(this.cbMSSV);
             this.groupBox2.Location = new System.Drawing.Point(414, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -229,50 +165,38 @@ namespace QuanLyDoAn
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn thông tin tìm kiếm";
             // 
-            // btTim
+            // cbLop
             // 
-            this.btTim.Image = ((System.Drawing.Image)(resources.GetObject("btTim.Image")));
-            this.btTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTim.Location = new System.Drawing.Point(137, 194);
-            this.btTim.Margin = new System.Windows.Forms.Padding(4);
-            this.btTim.Name = "btTim";
-            this.btTim.Size = new System.Drawing.Size(100, 27);
-            this.btTim.TabIndex = 3;
-            this.btTim.Text = "Tìm";
-            this.btTim.UseVisualStyleBackColor = true;
+            this.cbLop.AutoSize = true;
+            this.cbLop.Location = new System.Drawing.Point(27, 98);
+            this.cbLop.Margin = new System.Windows.Forms.Padding(4);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(120, 21);
+            this.cbLop.TabIndex = 2;
+            this.cbLop.Text = "Tìm theo khóa";
+            this.cbLop.UseVisualStyleBackColor = true;
             // 
-            // cbKhoa
+            // cbHoTen
             // 
-            this.cbKhoa.AutoSize = true;
-            this.cbKhoa.Location = new System.Drawing.Point(27, 98);
-            this.cbKhoa.Margin = new System.Windows.Forms.Padding(4);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(120, 21);
-            this.cbKhoa.TabIndex = 2;
-            this.cbKhoa.Text = "Tìm theo khóa";
-            this.cbKhoa.UseVisualStyleBackColor = true;
+            this.cbHoTen.AutoSize = true;
+            this.cbHoTen.Location = new System.Drawing.Point(27, 62);
+            this.cbHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.cbHoTen.Name = "cbHoTen";
+            this.cbHoTen.Size = new System.Drawing.Size(132, 21);
+            this.cbHoTen.TabIndex = 1;
+            this.cbHoTen.Text = "Tìm theo tên lớp";
+            this.cbHoTen.UseVisualStyleBackColor = true;
             // 
-            // cbTenLop
+            // cbMSSV
             // 
-            this.cbTenLop.AutoSize = true;
-            this.cbTenLop.Location = new System.Drawing.Point(27, 62);
-            this.cbTenLop.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTenLop.Name = "cbTenLop";
-            this.cbTenLop.Size = new System.Drawing.Size(132, 21);
-            this.cbTenLop.TabIndex = 1;
-            this.cbTenLop.Text = "Tìm theo tên lớp";
-            this.cbTenLop.UseVisualStyleBackColor = true;
-            // 
-            // cbMaLop
-            // 
-            this.cbMaLop.AutoSize = true;
-            this.cbMaLop.Location = new System.Drawing.Point(27, 25);
-            this.cbMaLop.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMaLop.Name = "cbMaLop";
-            this.cbMaLop.Size = new System.Drawing.Size(131, 21);
-            this.cbMaLop.TabIndex = 0;
-            this.cbMaLop.Text = "Tìm theo mã lớp";
-            this.cbMaLop.UseVisualStyleBackColor = true;
+            this.cbMSSV.AutoSize = true;
+            this.cbMSSV.Location = new System.Drawing.Point(27, 25);
+            this.cbMSSV.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMSSV.Name = "cbMSSV";
+            this.cbMSSV.Size = new System.Drawing.Size(131, 21);
+            this.cbMSSV.TabIndex = 0;
+            this.cbMSSV.Text = "Tìm theo mã lớp";
+            this.cbMSSV.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -289,6 +213,68 @@ namespace QuanLyDoAn
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Các chức năng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Tên lớp:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(116, 89);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(176, 22);
+            this.textBox1.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Khóa đào tạo:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(116, 161);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "62",
+            "61",
+            "60",
+            "59",
+            "58",
+            "57"});
+            this.comboBox1.Location = new System.Drawing.Point(116, 125);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 357);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(689, 158);
+            this.dataGridView1.TabIndex = 9;
             // 
             // btIn
             // 
@@ -350,15 +336,29 @@ namespace QuanLyDoAn
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btTim
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 357);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 158);
-            this.dataGridView1.TabIndex = 9;
+            this.btTim.Image = ((System.Drawing.Image)(resources.GetObject("btTim.Image")));
+            this.btTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTim.Location = new System.Drawing.Point(137, 194);
+            this.btTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btTim.Name = "btTim";
+            this.btTim.Size = new System.Drawing.Size(100, 27);
+            this.btTim.TabIndex = 3;
+            this.btTim.Text = "Tìm";
+            this.btTim.UseVisualStyleBackColor = true;
+            // 
+            // btLamMoi
+            // 
+            this.btLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btLamMoi.Image")));
+            this.btLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLamMoi.Location = new System.Drawing.Point(247, 194);
+            this.btLamMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.btLamMoi.Name = "btLamMoi";
+            this.btLamMoi.Size = new System.Drawing.Size(112, 28);
+            this.btLamMoi.TabIndex = 13;
+            this.btLamMoi.Text = "Làm mới";
+            this.btLamMoi.UseVisualStyleBackColor = true;
             // 
             // Lop
             // 
@@ -385,18 +385,18 @@ namespace QuanLyDoAn
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btLamMoi;
-        private System.Windows.Forms.TextBox tbSoSV;
-        private System.Windows.Forms.TextBox tbMaGV;
-        private System.Windows.Forms.TextBox tbMaLop;
+        private System.Windows.Forms.TextBox tbLop;
+        private System.Windows.Forms.TextBox tbHoTen;
+        private System.Windows.Forms.TextBox tbMSSV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btTim;
-        private System.Windows.Forms.CheckBox cbKhoa;
-        private System.Windows.Forms.CheckBox cbTenLop;
-        private System.Windows.Forms.CheckBox cbMaLop;
+        private System.Windows.Forms.CheckBox cbLop;
+        private System.Windows.Forms.CheckBox cbHoTen;
+        private System.Windows.Forms.CheckBox cbMSSV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btIn;
         private System.Windows.Forms.Button btThoat;
@@ -404,10 +404,10 @@ namespace QuanLyDoAn
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbTenLop;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbbKhoa;
-        private System.Windows.Forms.TextBox tbBacDaoTao;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
