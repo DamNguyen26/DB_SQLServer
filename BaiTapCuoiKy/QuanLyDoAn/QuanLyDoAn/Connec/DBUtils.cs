@@ -11,7 +11,7 @@ namespace QuanLyDoAn.Connec
     {
         public static SqlConnection GetDBConnection()
         {
-            string datasource = @"DAMNGUYEN";
+            string datasource = @"MAYTINH - 2HU1F0P\SQLEXPRESS";
 
             string database = "QLDoAn";
             string username = "SA";
